@@ -31,11 +31,20 @@ export const CONFIG = {
   // TODO: saya finalisasi kalimatnya nanti
   pertanyaanBesar: "Cathrine, kamu sayang aku gak?",
 
+  // Galeri tanpa caption — urutan sesuai daftar ini.
+  // foto10 (2terakhir) di posisi kedua sebelum akhir, foto11 (last) paling akhir.
   foto: [
-    { src: "/photos/foto1.jpg", caption: "TODO: caption foto 1" },
-    { src: "/photos/foto2.jpg", caption: "TODO: caption foto 2" },
-    { src: "/photos/foto3.jpg", caption: "TODO: caption foto 3" },
-    { src: "/photos/foto4.jpg", caption: "TODO: caption foto 4" },
+    "/photos/foto01.jpg",
+    "/photos/foto02.png",
+    "/photos/foto03.png",
+    "/photos/foto04.png",
+    "/photos/foto05.png",
+    "/photos/foto06.png",
+    "/photos/foto07.png",
+    "/photos/foto08.png",
+    "/photos/foto09.png",
+    "/photos/foto10.jpg",
+    "/photos/foto11.png",
   ],
 
   // Video penutup dari Google Drive.
