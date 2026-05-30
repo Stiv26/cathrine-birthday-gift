@@ -16,7 +16,7 @@ export function useAudio() {
   useEffect(() => {
     const audio = new Audio(CONFIG.musik);
     audio.loop = true;
-    audio.volume = 0.55;
+    audio.volume = 0.18; // pelan/kecil, sebagai latar lembut
     audio.preload = "auto";
     ref.current = audio;
     return () => {
