@@ -1,0 +1,104 @@
+/* ===== Keyframe animasi berat / dekoratif ===== */
+
+/* Kedip lembut untuk hint "ketuk layar" */
+@keyframes softPulse {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-4px);
+  }
+}
+.anim-soft-pulse {
+  animation: softPulse 2s ease-in-out infinite;
+}
+
+/* Hati melayang naik untuk FloatingHearts */
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) translateX(0) scale(var(--s, 1)) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: var(--o, 0.8);
+  }
+  90% {
+    opacity: var(--o, 0.8);
+  }
+  100% {
+    transform: translateY(-110vh) translateX(var(--drift, 0px))
+      scale(var(--s, 1)) rotate(var(--rot, 20deg));
+    opacity: 0;
+  }
+}
+.anim-float-up {
+  animation: floatUp linear infinite;
+  will-change: transform, opacity;
+}
+
+/* Kilau emas pada tali tirai */
+@keyframes shimmer {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.anim-shimmer {
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+/* Goyang untuk jawaban kuis salah */
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-8px);
+  }
+  40% {
+    transform: translateX(8px);
+  }
+  60% {
+    transform: translateX(-6px);
+  }
+  80% {
+    transform: translateX(6px);
+  }
+}
+.anim-shake {
+  animation: shake 0.45s ease-in-out;
+}
+
+/* Tekstur velvet untuk tirai */
+.velvet {
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.35) 0%,
+      rgba(255, 255, 255, 0.08) 18%,
+      rgba(0, 0, 0, 0.28) 36%,
+      rgba(255, 255, 255, 0.06) 54%,
+      rgba(0, 0, 0, 0.3) 72%,
+      rgba(255, 255, 255, 0.08) 90%,
+      rgba(0, 0, 0, 0.35) 100%
+    ),
+    linear-gradient(180deg, #d61733 0%, #c2122e 40%, #8f0c20 100%);
+  background-size: 64px 100%, 100% 100%;
+}
+
+/* Hormati prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .anim-soft-pulse,
+  .anim-float-up,
+  .anim-shimmer,
+  .anim-shake {
+    animation: none !important;
+  }
+}
